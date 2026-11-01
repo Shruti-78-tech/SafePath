@@ -1,0 +1,134 @@
+{
+  "accuracy": 0.84,
+  "macro_precision": 0.7761,
+  "macro_recall": 0.7815,
+  "macro_f1": 0.7777,
+  "weighted_precision": 0.849,
+  "weighted_recall": 0.84,
+  "weighted_f1": 0.8438,
+  "confusion_matrix": [
+    [
+      178,
+      18,
+      0
+    ],
+    [
+      12,
+      37,
+      8
+    ],
+    [
+      0,
+      10,
+      37
+    ]
+  ],
+  "per_class": {
+    "0": {
+      "class_label": "Low Risk",
+      "precision": 0.9368,
+      "recall": 0.9082,
+      "f1_score": 0.9223,
+      "support": 196
+    },
+    "1": {
+      "class_label": "Medium Risk",
+      "precision": 0.5692,
+      "recall": 0.6491,
+      "f1_score": 0.6066,
+      "support": 57
+    },
+    "2": {
+      "class_label": "High Risk",
+      "precision": 0.8222,
+      "recall": 0.7872,
+      "f1_score": 0.8043,
+      "support": 47
+    }
+  },
+  "total_test_samples": 300,
+  "feature_importances": [
+    {
+      "feature": "storm_severity_index",
+      "importance": 0.2377,
+      "percentage": 23.77
+    },
+    {
+      "feature": "rainfall_intensity_mmh",
+      "importance": 0.1872,
+      "percentage": 18.72
+    },
+    {
+      "feature": "wind_speed_kmh",
+      "importance": 0.1239,
+      "percentage": 12.39
+    },
+    {
+      "feature": "inundation_hazard",
+      "importance": 0.1131,
+      "percentage": 11.31
+    },
+    {
+      "feature": "historical_incidents",
+      "importance": 0.0985,
+      "percentage": 9.85
+    },
+    {
+      "feature": "road_type_code",
+      "importance": 0.0966,
+      "percentage": 9.66
+    },
+    {
+      "feature": "flood_susceptibility",
+      "importance": 0.0416,
+      "percentage": 4.16
+    },
+    {
+      "feature": "road_length_m",
+      "importance": 0.0385,
+      "percentage": 3.85
+    },
+    {
+      "feature": "temperature_c",
+      "importance": 0.0315,
+      "percentage": 3.15
+    },
+    {
+      "feature": "elevation_m",
+      "importance": 0.0315,
+      "percentage": 3.15
+    }
+  ],
+  "feature_names": [
+    "rainfall_intensity_mmh",
+    "wind_speed_kmh",
+    "temperature_c",
+    "historical_incidents",
+    "road_type_code",
+    "road_length_m",
+    "elevation_m",
+    "flood_susceptibility",
+    "storm_severity_index",
+    "inundation_hazard"
+  ],
+  "training_samples": 1200,
+  "model_hyperparameters": {
+    "n_estimators": 35,
+    "max_depth": 8,
+    "min_samples_split": 4,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "dataset_description": {
+    "total_samples": 1500,
+    "features_count": 10,
+    "target_classes": [
+      "Low Risk (0)",
+      "Medium Risk (1)",
+      "High Risk (2)"
+    ],
+    "data_provenance": "Reproducible physics-grounded disaster dataset with meteorological and hydrological parameters",
+    "validation_strategy": "Stratified random holdout test set (80/20), zero data leakage"
+  }
+}

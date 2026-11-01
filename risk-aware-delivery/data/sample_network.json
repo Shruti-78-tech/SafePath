@@ -1,0 +1,88 @@
+{
+  "name": "Dehradun-Rishikesh Emergency Logistics Corridor",
+  "center": [30.28, 78.18],
+  "default_zoom": 12,
+  "nodes": {
+    "DEPOT_MAIN": { "id": "DEPOT_MAIN", "name": "Central Emergency Relief Depot (ISBT)", "lat": 30.2925, "lon": 78.0125, "elevation_m": 640 },
+    "DEPOT_NORTH": { "id": "DEPOT_NORTH", "name": "Rajpur Logistics Staging Area", "lat": 30.3850, "lon": 78.0950, "elevation_m": 920 },
+    "JUNCTION_A": { "id": "JUNCTION_A", "name": "Clock Tower Major Intersection", "lat": 30.3245, "lon": 78.0425, "elevation_m": 665 },
+    "JUNCTION_B": { "id": "JUNCTION_B", "name": "Rispana River Crossing Bridge", "lat": 30.3010, "lon": 78.0650, "elevation_m": 630 },
+    "JUNCTION_C": { "id": "JUNCTION_C", "name": "Haridwar Bypass Circle", "lat": 30.2850, "lon": 78.0850, "elevation_m": 615 },
+    "JUNCTION_D": { "id": "JUNCTION_D", "name": "Doiwala Gateway Junction", "lat": 30.1820, "lon": 78.1250, "elevation_m": 540 },
+    "JUNCTION_E": { "id": "JUNCTION_E", "name": "Song River Lowland Causeway", "lat": 30.2250, "lon": 78.1650, "elevation_m": 510 },
+    "JUNCTION_F": { "id": "JUNCTION_F", "name": "Thano Forest Ridge Highway", "lat": 30.2950, "lon": 78.2150, "elevation_m": 780 },
+    "JUNCTION_G": { "id": "JUNCTION_G", "name": "Rani Pokhari Bypass", "lat": 30.1650, "lon": 78.2100, "elevation_m": 490 },
+    "JUNCTION_H": { "id": "JUNCTION_H", "name": "Bhogpur Hill Traverse", "lat": 30.3350, "lon": 78.2450, "elevation_m": 850 },
+    "JUNCTION_I": { "id": "JUNCTION_I", "name": "Narendra Nagar Mountain Crest", "lat": 30.1600, "lon": 78.2850, "elevation_m": 1120 },
+    "JUNCTION_J": { "id": "JUNCTION_J", "name": "Shyampur Distribution Hub", "lat": 30.0750, "lon": 78.2550, "elevation_m": 380 },
+    "JUNCTION_K": { "id": "JUNCTION_K", "name": "Jolly Grant Emergency Helipad", "lat": 30.1900, "lon": 78.1800, "elevation_m": 530 },
+    "JUNCTION_L": { "id": "JUNCTION_L", "name": "Natraj Chowk Terminal", "lat": 30.1050, "lon": 78.2850, "elevation_m": 375 },
+    "HOSPITAL_AIIMS": { "id": "HOSPITAL_AIIMS", "name": "AIIMS Emergency Trauma Center Rishikesh", "lat": 30.0780, "lon": 78.2910, "elevation_m": 365 },
+    "SHELTER_EAST": { "id": "SHELTER_EAST", "name": "Muni Ki Reti Disaster Shelter", "lat": 30.1250, "lon": 78.3150, "elevation_m": 395 },
+    "SHELTER_VALLEY": { "id": "SHELTER_VALLEY", "name": "Maldevta Flood Evacuation Center", "lat": 30.3150, "lon": 78.1350, "elevation_m": 690 }
+  },
+  "edges": [
+    { "id": "E01", "u": "DEPOT_MAIN", "v": "JUNCTION_A", "road_name": "Saharanpur Road Primary", "road_type": "primary", "length_m": 4600, "speed_limit_kmh": 50, "flood_susceptibility": 0.15, "historical_incidents": 1, "elevation_m": 650 },
+    { "id": "E02", "u": "JUNCTION_A", "v": "DEPOT_MAIN", "road_name": "Saharanpur Road Primary", "road_type": "primary", "length_m": 4600, "speed_limit_kmh": 50, "flood_susceptibility": 0.15, "historical_incidents": 1, "elevation_m": 650 },
+
+    { "id": "E03", "u": "JUNCTION_A", "v": "DEPOT_NORTH", "road_name": "Rajpur Foothills Arterial", "road_type": "secondary", "length_m": 8500, "speed_limit_kmh": 45, "flood_susceptibility": 0.20, "historical_incidents": 2, "elevation_m": 780 },
+    { "id": "E04", "u": "DEPOT_NORTH", "v": "JUNCTION_A", "road_name": "Rajpur Foothills Arterial", "road_type": "secondary", "length_m": 8500, "speed_limit_kmh": 45, "flood_susceptibility": 0.20, "historical_incidents": 2, "elevation_m": 780 },
+
+    { "id": "E05", "u": "JUNCTION_A", "v": "JUNCTION_B", "road_name": "EC Road - Rispana Link", "road_type": "primary", "length_m": 3400, "speed_limit_kmh": 50, "flood_susceptibility": 0.70, "historical_incidents": 4, "elevation_m": 645 },
+    { "id": "E06", "u": "JUNCTION_B", "v": "JUNCTION_A", "road_name": "EC Road - Rispana Link", "road_type": "primary", "length_m": 3400, "speed_limit_kmh": 50, "flood_susceptibility": 0.70, "historical_incidents": 4, "elevation_m": 645 },
+
+    { "id": "E07", "u": "DEPOT_MAIN", "v": "JUNCTION_C", "road_name": "ISBT Bypass Ring Express", "road_type": "trunk", "length_m": 7200, "speed_limit_kmh": 65, "flood_susceptibility": 0.25, "historical_incidents": 1, "elevation_m": 625 },
+    { "id": "E08", "u": "JUNCTION_C", "v": "DEPOT_MAIN", "road_name": "ISBT Bypass Ring Express", "road_type": "trunk", "length_m": 7200, "speed_limit_kmh": 65, "flood_susceptibility": 0.25, "historical_incidents": 1, "elevation_m": 625 },
+
+    { "id": "E09", "u": "JUNCTION_B", "v": "JUNCTION_C", "road_name": "Rispana Embankment Road", "road_type": "tertiary", "length_m": 2600, "speed_limit_kmh": 40, "flood_susceptibility": 0.85, "historical_incidents": 5, "elevation_m": 620 },
+    { "id": "E10", "u": "JUNCTION_C", "v": "JUNCTION_B", "road_name": "Rispana Embankment Road", "road_type": "tertiary", "length_m": 2600, "speed_limit_kmh": 40, "flood_susceptibility": 0.85, "historical_incidents": 5, "elevation_m": 620 },
+
+    { "id": "E11", "u": "JUNCTION_B", "v": "SHELTER_VALLEY", "road_name": "Maldevta Valley Road", "road_type": "secondary", "length_m": 6900, "speed_limit_kmh": 45, "flood_susceptibility": 0.65, "historical_incidents": 4, "elevation_m": 660 },
+    { "id": "E12", "u": "SHELTER_VALLEY", "v": "JUNCTION_B", "road_name": "Maldevta Valley Road", "road_type": "secondary", "length_m": 6900, "speed_limit_kmh": 45, "flood_susceptibility": 0.65, "historical_incidents": 4, "elevation_m": 660 },
+
+    { "id": "E13", "u": "JUNCTION_C", "v": "JUNCTION_D", "road_name": "NH-7 Haridwar Corridor", "road_type": "trunk", "length_m": 12200, "speed_limit_kmh": 70, "flood_susceptibility": 0.30, "historical_incidents": 2, "elevation_m": 570 },
+    { "id": "E14", "u": "JUNCTION_D", "v": "JUNCTION_C", "road_name": "NH-7 Haridwar Corridor", "road_type": "trunk", "length_m": 12200, "speed_limit_kmh": 70, "flood_susceptibility": 0.30, "historical_incidents": 2, "elevation_m": 570 },
+
+    { "id": "E15", "u": "JUNCTION_C", "v": "JUNCTION_E", "road_name": "Song Lowland Direct Route", "road_type": "secondary", "length_m": 9800, "speed_limit_kmh": 50, "flood_susceptibility": 0.90, "historical_incidents": 7, "elevation_m": 530 },
+    { "id": "E16", "u": "JUNCTION_E", "v": "JUNCTION_C", "road_name": "Song Lowland Direct Route", "road_type": "secondary", "length_m": 9800, "speed_limit_kmh": 50, "flood_susceptibility": 0.90, "historical_incidents": 7, "elevation_m": 530 },
+
+    { "id": "E17", "u": "SHELTER_VALLEY", "v": "JUNCTION_F", "road_name": "Thano Upper Ridge Highway", "road_type": "primary", "length_m": 8200, "speed_limit_kmh": 55, "flood_susceptibility": 0.15, "historical_incidents": 1, "elevation_m": 740 },
+    { "id": "E18", "u": "JUNCTION_F", "v": "SHELTER_VALLEY", "road_name": "Thano Upper Ridge Highway", "road_type": "primary", "length_m": 8200, "speed_limit_kmh": 55, "flood_susceptibility": 0.15, "historical_incidents": 1, "elevation_m": 740 },
+
+    { "id": "E19", "u": "JUNCTION_D", "v": "JUNCTION_K", "road_name": "Doiwala - Airport Connector", "road_type": "primary", "length_m": 5600, "speed_limit_kmh": 60, "flood_susceptibility": 0.25, "historical_incidents": 1, "elevation_m": 535 },
+    { "id": "E20", "u": "JUNCTION_K", "v": "JUNCTION_D", "road_name": "Doiwala - Airport Connector", "road_type": "primary", "length_m": 5600, "speed_limit_kmh": 60, "flood_susceptibility": 0.25, "historical_incidents": 1, "elevation_m": 535 },
+
+    { "id": "E21", "u": "JUNCTION_E", "v": "JUNCTION_K", "road_name": "Song Causeway to Jolly Grant", "road_type": "tertiary", "length_m": 4200, "speed_limit_kmh": 40, "flood_susceptibility": 0.95, "historical_incidents": 8, "elevation_m": 515 },
+    { "id": "E22", "u": "JUNCTION_K", "v": "JUNCTION_E", "road_name": "Song Causeway to Jolly Grant", "road_type": "tertiary", "length_m": 4200, "speed_limit_kmh": 40, "flood_susceptibility": 0.95, "historical_incidents": 8, "elevation_m": 515 },
+
+    { "id": "E23", "u": "JUNCTION_F", "v": "JUNCTION_K", "road_name": "Thano - Airport Elevated Spur", "road_type": "primary", "length_m": 11500, "speed_limit_kmh": 60, "flood_susceptibility": 0.18, "historical_incidents": 1, "elevation_m": 650 },
+    { "id": "E24", "u": "JUNCTION_K", "v": "JUNCTION_F", "road_name": "Thano - Airport Elevated Spur", "road_type": "primary", "length_m": 11500, "speed_limit_kmh": 60, "flood_susceptibility": 0.18, "historical_incidents": 1, "elevation_m": 650 },
+
+    { "id": "E25", "u": "JUNCTION_F", "v": "JUNCTION_H", "road_name": "Bhogpur Scenic Bypass", "road_type": "secondary", "length_m": 6100, "speed_limit_kmh": 50, "flood_susceptibility": 0.20, "historical_incidents": 1, "elevation_m": 810 },
+    { "id": "E26", "u": "JUNCTION_H", "v": "JUNCTION_F", "road_name": "Bhogpur Scenic Bypass", "road_type": "secondary", "length_m": 6100, "speed_limit_kmh": 50, "flood_susceptibility": 0.20, "historical_incidents": 1, "elevation_m": 810 },
+
+    { "id": "E27", "u": "JUNCTION_K", "v": "JUNCTION_G", "road_name": "Rani Pokhari Main Arterial", "road_type": "primary", "length_m": 4100, "speed_limit_kmh": 55, "flood_susceptibility": 0.40, "historical_incidents": 2, "elevation_m": 510 },
+    { "id": "E28", "u": "JUNCTION_G", "v": "JUNCTION_K", "road_name": "Rani Pokhari Main Arterial", "road_type": "primary", "length_m": 4100, "speed_limit_kmh": 55, "flood_susceptibility": 0.40, "historical_incidents": 2, "elevation_m": 510 },
+
+    { "id": "E29", "u": "JUNCTION_G", "v": "JUNCTION_L", "road_name": "Dehradun-Rishikesh Highway (NH-34)", "road_type": "trunk", "length_m": 9500, "speed_limit_kmh": 70, "flood_susceptibility": 0.35, "historical_incidents": 3, "elevation_m": 430 },
+    { "id": "E30", "u": "JUNCTION_L", "v": "JUNCTION_G", "road_name": "Dehradun-Rishikesh Highway (NH-34)", "road_type": "trunk", "length_m": 9500, "speed_limit_kmh": 70, "flood_susceptibility": 0.35, "historical_incidents": 3, "elevation_m": 430 },
+
+    { "id": "E31", "u": "JUNCTION_H", "v": "JUNCTION_I", "road_name": "Narendra Nagar Mountain Pass", "road_type": "primary", "length_m": 14200, "speed_limit_kmh": 45, "flood_susceptibility": 0.10, "historical_incidents": 2, "elevation_m": 980 },
+    { "id": "E32", "u": "JUNCTION_I", "v": "JUNCTION_H", "road_name": "Narendra Nagar Mountain Pass", "road_type": "primary", "length_m": 14200, "speed_limit_kmh": 45, "flood_susceptibility": 0.10, "historical_incidents": 2, "elevation_m": 980 },
+
+    { "id": "E33", "u": "JUNCTION_I", "v": "SHELTER_EAST", "road_name": "Muni Ki Reti Ridge Descent", "road_type": "secondary", "length_m": 6800, "speed_limit_kmh": 40, "flood_susceptibility": 0.15, "historical_incidents": 2, "elevation_m": 720 },
+    { "id": "E34", "u": "SHELTER_EAST", "v": "JUNCTION_I", "road_name": "Muni Ki Reti Ridge Descent", "road_type": "secondary", "length_m": 6800, "speed_limit_kmh": 40, "flood_susceptibility": 0.15, "historical_incidents": 2, "elevation_m": 720 },
+
+    { "id": "E35", "u": "JUNCTION_L", "v": "SHELTER_EAST", "road_name": "Ganga Bank Bypass", "road_type": "primary", "length_m": 3700, "speed_limit_kmh": 50, "flood_susceptibility": 0.60, "historical_incidents": 3, "elevation_m": 380 },
+    { "id": "E36", "u": "SHELTER_EAST", "v": "JUNCTION_L", "road_name": "Ganga Bank Bypass", "road_type": "primary", "length_m": 3700, "speed_limit_kmh": 50, "flood_susceptibility": 0.60, "historical_incidents": 3, "elevation_m": 380 },
+
+    { "id": "E37", "u": "JUNCTION_L", "v": "HOSPITAL_AIIMS", "road_name": "Barrage Road to AIIMS", "road_type": "primary", "length_m": 3100, "speed_limit_kmh": 50, "flood_susceptibility": 0.30, "historical_incidents": 1, "elevation_m": 370 },
+    { "id": "E38", "u": "HOSPITAL_AIIMS", "v": "JUNCTION_L", "road_name": "Barrage Road to AIIMS", "road_type": "primary", "length_m": 3100, "speed_limit_kmh": 50, "flood_susceptibility": 0.30, "historical_incidents": 1, "elevation_m": 370 },
+
+    { "id": "E39", "u": "JUNCTION_D", "v": "JUNCTION_J", "road_name": "Haridwar - Shyampur Link", "road_type": "secondary", "length_m": 14500, "speed_limit_kmh": 55, "flood_susceptibility": 0.45, "historical_incidents": 2, "elevation_m": 450 },
+    { "id": "E40", "u": "JUNCTION_J", "v": "JUNCTION_D", "road_name": "Haridwar - Shyampur Link", "road_type": "secondary", "length_m": 14500, "speed_limit_kmh": 55, "flood_susceptibility": 0.45, "historical_incidents": 2, "elevation_m": 450 },
+
+    { "id": "E41", "u": "JUNCTION_J", "v": "HOSPITAL_AIIMS", "road_name": "Shyampur AIIMS Southern Access", "road_type": "primary", "length_m": 4500, "speed_limit_kmh": 50, "flood_susceptibility": 0.35, "historical_incidents": 1, "elevation_m": 370 },
+    { "id": "E42", "u": "HOSPITAL_AIIMS", "v": "JUNCTION_J", "road_name": "Shyampur AIIMS Southern Access", "road_type": "primary", "length_m": 4500, "speed_limit_kmh": 50, "flood_susceptibility": 0.35, "historical_incidents": 1, "elevation_m": 370 }
+  ]
+}
